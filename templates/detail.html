@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport"content="width=device-width,user-scalable=no,initial-scale=1.0,  maximum-scale=1.0,minimum-scale=1.0">
+    <title>Explanation of {{clazz}}</title>
+
+    </head>
+    <body>
+        <form  method=post id="frm">
+            <div>
+                <select form="frm" name="idx" onchange="window.location=this.value;">
+                    {% for clazz in available_classes %}
+                        {% if available_classes.index(clazz) == idx %}
+                            <option value="{{available_classes.index(clazz)}}" selected>{{clazz}}</option>
+                        {% else %}
+                            <option value="{{available_classes.index(clazz)}}">{{clazz}}</option>
+                        {% endif %}}
+                    {% endfor %}
+                </select>
+            </div>
+        </form>
+        <div>
+            <div style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-between;">
+                <div  style="width: 45vw;display: flex;flex-direction: column;">
+                    <h3>
+                        Explanation:
+                    </h3>
+                    <img src="{{pic}}"/>
+                </div>
+                <div style="width: 45vw;display: flex;flex-direction: column">
+                    <h3>
+                        Code
+                    </h3>
+                    <textarea style="height: 100%;">
+                        {{code}}
+                    </textarea>
+                </div>
+            </div>
+            <div>
+                <div>Result: </div>
+                <div class="res" style="display: none">{{y_predict}}</div>
+                <button id="btn" onclick="document.querySelector('.res').setAttribute('style','display:block'); document.querySelector('#btn').setAttribute('style','display:none')">Display</button>
+            </div>
+        </div>
+    </body>
+
+</html>
