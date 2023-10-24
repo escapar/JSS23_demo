@@ -1,5 +1,6 @@
 # Demo for the JSS23 Paper
-![Screenshot](https://github.com/escapar/JSS23_demo/assets/13232736/835d9fe9-17eb-4dc3-b4ad-f62046ce7e33)
+
+![257033126-835d9fe9-17eb-4dc3-b4ad-f62046ce7e33](https://github.com/escapar/JSS23_demo/assets/13232736/c94b53f4-2a78-4905-94b0-dd25ba12bc4f)
 
 ## Description
 
